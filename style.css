@@ -7,6 +7,7 @@ body {
   margin: 20px auto;
   border: 1px solid #ccc;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .accordion-item {
@@ -27,7 +28,7 @@ body {
   border: none;
   cursor: pointer;
   outline: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.7s ease;
 }
 
 .accordion-header:hover {
@@ -35,7 +36,13 @@ body {
 }
 
 .accordion-content {
-  padding: 15px;
-  display: none;
+  padding: 0 15px;
+  max-height: 0;
+  overflow: hidden;
   background-color: white;
+  transition: max-height 0.7s ease, padding 0.7s ease;
+}
+
+.accordion-content p {
+  margin: 15px 0;
 }
